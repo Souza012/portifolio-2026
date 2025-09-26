@@ -1,0 +1,839 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playwrite+CO+Guides&family=Playwrite+IN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Satisfy&family=Share+Tech&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Hero section ocupa tela inteira */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-btn img {
+  width: 35px;
+  height: 35px;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+
+.hero h1 {
+  font-size: 6em;
+  color: rgb(32, 32, 190);
+  margin-bottom: 20px;
+}
+
+.hero h3 {
+  font-size: 3em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  color: #333;
+  line-height: 1.6;
+}
+
+h1 {
+  color: rgb(32, 32, 190);
+  cursor: default;
+  font-size: 6em;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+h3 {
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  color: #555;
+  margin-top: -55px;
+}
+
+
+
+.menu-btn span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #1a2041;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+#menu-cel {
+  display: none;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1002;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.slide-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  min-height: 100vh;
+  background: #1a2041;
+  transition: left 0.3s ease;
+  padding-top: 60px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-menu ul {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+}
+
+#menu-cel:checked~.overlay {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1000;
+}
+
+.slide-menu li,
+.slide-menu a {
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  list-style-type: none;
+  color: white;
+  text-decoration: none;
+}
+
+.slide-menu li:hover,
+.slide-menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+#menu-cel:checked~.slide-menu {
+  left: 0;
+}
+
+#menu-cel:checked~.overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#menu-cel:checked+.menu-btn span:nth-child(1) {
+  transform: rotate(45deg) translateY(13px);
+  background: #fff;
+}
+
+#menu-cel:checked+.menu-btn span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-cel:checked+.menu-btn span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-13px);
+  background: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  width: 100px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 50%;
+}
+
+
+.back-perfil {
+  margin: 0;
+  padding: 5px;
+  height: 200px;
+  display: flex;
+}
+
+.perfil {
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Seção Serviços */
+.servicos {
+  background: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.servicos h2 {
+  font-size: 3.5rem;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.servicos .intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  margin: 15px;
+  padding: 20px 20px 40px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-25px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.projetos {
+  background: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.projetos h2 {
+  font-size: 3.5rem;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+
+.card-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  margin-top: 40px;
+}
+
+.card-card {
+  width: 300px;
+  height: auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  color: white;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.card-card:hover {
+  transform: rotateY(25deg) rotateX(15deg) scale(1.08);
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  transform: translateZ(20px);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  transform: translateZ(30px);
+}
+
+
+.mini-card {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  background: rgb(12, 12, 167);
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.mini-card:hover {
+  background: rgb(32, 32, 190);
+}
+
+
+.skills-track {
+  overflow: hidden;
+  width: 100%;
+}
+
+.skills-carousel {
+  display: flex;
+  gap: 40px;
+  animation: scroll 20s linear infinite;
+}
+
+.skills {
+  background: #f4f4f4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 3.5rem;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+.skills-track {
+  overflow: hidden;
+  width: 100%;
+}
+
+.skills-carousel {
+  display: flex;
+  gap: 40px;
+  animation: scroll 14s linear infinite;
+}
+
+.skill {
+  flex: 0 0 auto;
+  width: 60px;
+  height: 60px;
+}
+
+.skill img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill img:hover {
+  transform: scale(1.2);
+}
+
+/* Animação infinita suave */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+    /* move metade do carrossel duplicado */
+  }
+}
+
+
+.contato {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f0f4f8;
+}
+
+.contato h2 {
+  font-size: 3.5rem;
+  font-weight: bolder;
+  margin-bottom: 30px;
+  color: #000000;
+}
+
+/* Formulário */
+.form-contato {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 15px 20px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.form-contato textarea {
+  resize: none;
+}
+
+.form-contato button {
+  padding: 15px 0;
+  background-color: #1a2041;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.form-contato button:hover {
+  background-color: #2b3160;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.footer {
+  background: #1a2041;
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+}
+
+.footer .social-links {
+  margin-bottom: 15px;
+}
+
+.footer .social-links a {
+  display: inline-block;
+  margin: 0 12px;
+  transition: transform 1.5s ease, filter 1.3s ease;
+}
+
+.footer .social-links img {
+  width: 35px;
+  height: 35px;
+}
+
+.footer .social-links a:hover img {
+  filter: brightness(1) saturate(2);
+  transform: scale(1.1);
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.footer-text span {
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+/* ========================== */
+/* RESPONSIVIDADE UNIFICADA   */
+/* ========================== */
+
+@media (max-width: 1024px) {
+
+  /* Hero */
+  .hero h1 {
+    font-size: 4.5em;
+  }
+
+  .hero h3 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  /* Cards Projetos */
+  .card-card {
+    width: 250px;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  /* Skills & Contato */
+  .skills h2,
+  .contato h2 {
+    font-size: 3rem;
+  }
+
+  .form-contato input,
+  .form-contato textarea {
+    font-size: 0.95rem;
+  }
+
+  /* Menu Lateral */
+  .slide-menu {
+    width: 220px;
+    padding-top: 60px;
+  }
+
+  .menu-btn {
+    top: 15px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Hero */
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero h3 {
+    font-size: 2em;
+    margin-top: 2px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Cards Projetos */
+  .card-card {
+    width: 220px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .mini-card {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  /* Skills & Contato */
+  .skills h2,
+  .contato h2 {
+    font-size: 2.5rem;
+  }
+
+  .skill {
+    width: 80px;
+    height: 50px;
+  }
+
+  .skills-carousel {
+    gap: 30px;
+  }
+
+  .form-contato {
+    max-width: 90%;
+    gap: 15px;
+  }
+
+  .form-contato input,
+  .form-contato textarea {
+    padding: 12px 15px;
+  }
+
+  .form-contato button {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+
+  /* Menu Lateral */
+  .slide-menu {
+    position: fixed;      /* mantém o menu fixo na tela */
+    top: 0;
+    left: -200px;         /* fora da tela inicialmente */
+    width: 200px;
+    height: 100vh;        /* cobre toda a altura da tela */
+    padding-top: 50px;
+    overflow: hidden;     /* impede scroll externo */
+    z-index: 1001;
+}
+
+.slide-menu ul {
+    height: 100%;         /* ocupa toda a altura do menu */
+    overflow-y: auto;     /* permite scroll dentro do menu */
+    margin: 0;
+    padding: 0;
+}
+  .menu-btn {
+    top: 15px;
+    left: 15px;
+    width: 28px;
+    height: 20px;
+  }
+
+
+
+  .slide-menu li,
+  .slide-menu a {
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hero */
+  .hero h1 {
+    font-size: 2.2em;
+  }
+
+  .hero h3 {
+    font-size: 1.5em;
+    margin-top: 2px;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+    max-width: 90%;
+  }
+
+  /* Cards Projetos */
+  .card-card {
+    width: 90%;
+    margin: 0 auto 40px auto;
+  }
+
+  .mini-card {
+    bottom: -25px;
+    padding: 7px 14px;
+    font-size: 0.85rem;
+  }
+
+  /* Skills & Contato */
+  .skills h2,
+  .contato h2 {
+    font-size: 2rem;
+  }
+
+  .skill {
+    width: 35px;      /* reduz para caber na tela */
+    height: 35px;
+    flex-shrink: 0;   /* impede que encolha demais */
+  }
+
+  .skills-carousel {
+    gap: 15px;        /* reduz o espaço entre skills */
+    overflow-x: auto; /* permite scroll horizontal */
+    padding-bottom: 10px; /* evita cortar borda */
+  }
+
+  .skills-carousel::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .skills-carousel::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 3px;
+  }
+
+  /* Formulário de Contato */
+  .form-contato {
+    gap: 12px;
+  }
+
+  .form-contato input,
+  .form-contato textarea {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .form-contato button {
+    font-size: 0.95rem;
+    padding: 10px 0;
+  }
+
+  /* Footer */
+  .footer .social-links img {
+    width: 30px;
+    height: 30px;
+    margin: 0 8px;
+  }
+
+  .footer-text {
+    font-size: 0.85rem;
+  }
+
+  /* Menu Lateral */
+  .slide-menu {
+    position: fixed;
+    top: 0;
+    left: -180px;
+    width: 180px;
+    height: 100vh;
+    padding-top: 45px;
+    overflow: hidden;
+    z-index: 1001;
+  }
+
+  .slide-menu ul {
+    height: 100%;
+    overflow-y: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-btn {
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 20px;
+  }
+
+  .menu-btn span {
+    height: 2.5px;
+  }
+
+  .slide-menu li,
+  .slide-menu a {
+    padding: 5px 8px;
+    font-size: 0.9rem;
+  }
+
+  .whatsapp-btn {
+    width: 50px;          /* menor */
+    height: 50px;
+    bottom: 15px;         /* mais próximo da borda inferior */
+    right: -70px;          /* mais próximo da borda direita */
+  }
+
+  .whatsapp-btn img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 360px) {
+  .whatsapp-btn {
+    width: 45px;
+    height: 45px;
+    bottom: 10px;
+    right: -40px;
+  }
+
+  .whatsapp-btn img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
