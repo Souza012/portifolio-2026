@@ -547,10 +547,6 @@ h3 {
   color: #00bcd4;
 }
 
-/* ========================== */
-/* RESPONSIVIDADE UNIFICADA   */
-/* ========================== */
-
 @media (max-width: 1024px) {
 
   /* Hero */
@@ -726,16 +722,27 @@ h3 {
     font-size: 2rem;
   }
 
-  .skill {
-    width: 35px; 
-    height: 35px;
-    flex-shrink: 0;
+  .skills-carousel {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    animation: scrollSkillsMobile 8s linear infinite;
   }
 
-  .skills-carousel {
-    gap: 15px;       
-    overflow-x: auto; 
-    padding-bottom: 10px; 
+  .skills-carousel .skill {
+    flex: 0 0 auto;
+    width: 35px;
+    height: 35px;
+  }
+
+  @keyframes scrollSkillsMobile {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); 
+    }
   }
 
   .skills-carousel::-webkit-scrollbar {
@@ -808,12 +815,22 @@ h3 {
     padding: 5px 8px;
     font-size: 0.9rem;
   }
-
+  
+  /* Botão WhatsApp fixo */
   .whatsapp-btn {
-    width: 50px;          
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
     height: 50px;
-    bottom: 15px;         
-    right: -70px;      
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .whatsapp-btn img {
@@ -823,16 +840,38 @@ h3 {
 }
 
 @media (max-width: 360px) {
+   /* Carrossel de Skills */
+   .skills-carousel {
+    gap: 8px;
+    animation: scrollSkillsSmall 8s linear infinite;
+  }
+
+  .skills-carousel .skill {
+    width: 30px;
+    height: 30px;
+  }
+
+  @keyframes scrollSkillsSmall {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
   .whatsapp-btn {
+    bottom: 10px;
+    right: 10px;
     width: 45px;
     height: 45px;
-    bottom: 10px;
-    right: -40px;
   }
 
   .whatsapp-btn img {
     width: 25px;
     height: 25px;
   }
+
 }
+
 
