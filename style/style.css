@@ -716,11 +716,6 @@ h3 {
     font-size: 0.85rem;
   }
 
-  /* Skills & Contato */
-  .skills h2,
-  .contato h2 {
-    font-size: 2rem;
-  }
 
   .skills-carousel {
     display: flex;
