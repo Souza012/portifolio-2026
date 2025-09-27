@@ -1,4 +1,4 @@
-# 🌟 Portfólio 2026 - Guilherme Souza
+# 🚀 Portfólio 2026 - Guilherme Souza
 
 Bem-vindo ao meu portfólio pessoal! Aqui você pode conhecer meus **projetos**, minhas **habilidades** e formas de **contato**.  
 
