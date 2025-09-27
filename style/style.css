@@ -514,7 +514,7 @@ h3 {
   color: #fff;
   text-align: center;
   padding: 30px 20px;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 
 .footer .social-links {
@@ -660,19 +660,19 @@ h3 {
 
   /* Menu Lateral */
   .slide-menu {
-    position: fixed;      /* mantém o menu fixo na tela */
+    position: fixed;      
     top: 0;
-    left: -200px;         /* fora da tela inicialmente */
+    left: -200px;         
     width: 200px;
-    height: 100vh;        /* cobre toda a altura da tela */
+    height: 100vh;        
     padding-top: 50px;
-    overflow: hidden;     /* impede scroll externo */
+    overflow: hidden;     
     z-index: 1001;
 }
 
 .slide-menu ul {
-    height: 100%;         /* ocupa toda a altura do menu */
-    overflow-y: auto;     /* permite scroll dentro do menu */
+    height: 100%;         
+    overflow-y: auto;     
     margin: 0;
     padding: 0;
 }
@@ -727,15 +727,15 @@ h3 {
   }
 
   .skill {
-    width: 35px;      /* reduz para caber na tela */
+    width: 35px; 
     height: 35px;
-    flex-shrink: 0;   /* impede que encolha demais */
+    flex-shrink: 0;
   }
 
   .skills-carousel {
-    gap: 15px;        /* reduz o espaço entre skills */
-    overflow-x: auto; /* permite scroll horizontal */
-    padding-bottom: 10px; /* evita cortar borda */
+    gap: 15px;       
+    overflow-x: auto; 
+    padding-bottom: 10px; 
   }
 
   .skills-carousel::-webkit-scrollbar {
@@ -774,7 +774,6 @@ h3 {
     font-size: 0.85rem;
   }
 
-  /* Menu Lateral */
   .slide-menu {
     position: fixed;
     top: 0;
@@ -811,10 +810,10 @@ h3 {
   }
 
   .whatsapp-btn {
-    width: 50px;          /* menor */
+    width: 50px;          
     height: 50px;
-    bottom: 15px;         /* mais próximo da borda inferior */
-    right: -70px;          /* mais próximo da borda direita */
+    bottom: 15px;         
+    right: -70px;      
   }
 
   .whatsapp-btn img {
