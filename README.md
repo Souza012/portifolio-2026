@@ -10,7 +10,6 @@ Este projeto foi desenvolvido com **HTML, CSS e JavaScript**, com foco em respon
 
 - HTML5
 - CSS3 (com responsividade e animações)
-- JavaScript
 - Git & GitHub
 
 ---
@@ -19,8 +18,7 @@ Este projeto foi desenvolvido com **HTML, CSS e JavaScript**, com foco em respon
 
 - `index.html` → Página principal do portfólio  
 - `style/` → Contém os arquivos CSS  
-- `imgs/` → Imagens utilizadas no site  
-- `scripts/` → Scripts JS (se houver)
+- `imgs/` → Imagens utilizadas no site
 
 ---
 
