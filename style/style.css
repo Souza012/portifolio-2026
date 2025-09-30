@@ -544,7 +544,7 @@ h3 {
 
 .footer-text span {
   font-weight: bold;
-  color: #00bcd4;
+  color: #0099ff;
 }
 
 @media (max-width: 1024px) {
@@ -689,6 +689,13 @@ h3 {
 }
 
 @media (max-width: 480px) {
+
+  /*Logo*/
+  .logo{
+    width: 80px;
+    margin-top: -15px;
+  }
+
   /* Hero */
   .hero h1 {
     font-size: 2.2em;
@@ -835,6 +842,13 @@ h3 {
 }
 
 @media (max-width: 360px) {
+
+  /*Logo*/
+  .logo{
+    width: 80px;
+    margin-top: -15px;
+  }
+
    /* Carrossel de Skills */
    .skills-carousel {
     gap: 8px;
