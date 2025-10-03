@@ -104,7 +104,7 @@ h3 {
   display: block;
   height: 3px;
   width: 100%;
-  background: #1a2041;
+  background: #000000;
   border-radius: 3px;
   transition: 0.3s;
 }
@@ -132,7 +132,7 @@ h3 {
   left: -250px;
   width: 250px;
   min-height: 100vh;
-  background: #1a2041;
+  background: #7A7171;
   transition: left 0.3s ease;
   padding-top: 60px;
   z-index: 1001;
@@ -179,6 +179,7 @@ h3 {
   pointer-events: none;
   transition: opacity 0.3s ease;
   z-index: 1000;
+  cursor: pointer; 
 }
 
 #menu-cel:checked~.slide-menu {
@@ -217,11 +218,12 @@ h3 {
   z-index: 1000;
 }
 
-.logo {
-  width: 100px;
-  position: absolute;
+
+.logo-img {
+  position:absolute;
   top: 20px;
   right: 20px;
+  width: 150px;
   border-radius: 50%;
 }
 
@@ -442,7 +444,6 @@ h3 {
 
   100% {
     transform: translateX(-50%);
-    /* move metade do carrossel duplicado */
   }
 }
 
@@ -510,7 +511,7 @@ h3 {
 }
 
 .footer {
-  background: #1a2041;
+  background: #7a7171;
   color: #fff;
   text-align: center;
   padding: 30px 20px;
@@ -544,7 +545,7 @@ h3 {
 
 .footer-text span {
   font-weight: bold;
-  color: #0099ff;
+  color: #000000;
 }
 
 @media (max-width: 1024px) {
@@ -596,6 +597,22 @@ h3 {
 
 @media (max-width: 768px) {
 
+  .header {
+    background-color: #7a7171;
+    height: 160px;
+    position: relative;
+  }
+  
+ 
+  .logo-img {
+    position: absolute;
+    top: 80px;
+    left: 50%;               
+    transform: translateX(-50%);
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+  }
   /* Hero */
   .hero h1 {
     font-size: 2.5em;
@@ -689,19 +706,32 @@ h3 {
 }
 
 @media (max-width: 480px) {
-
-  /*Logo*/
-  .logo{
-    width: 80px;
-    margin-top: -15px;
+  .header {
+    background-color: #7a7171;
+    height: 200px;
+    position: relative;
   }
+  
+  .logo-img {
+    position: absolute;
+    top: 20px;            
+    left: 50%;            
+    transform: translateX(-50%); 
+    width: 170px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+  }
+  
+  
 
   /* Hero */
   .hero h1 {
+    margin-top: -250px;
     font-size: 2.2em;
   }
 
   .hero h3 {
+    margin-top: -150px;
     font-size: 1.5em;
     margin-top: 2px;
   }
@@ -709,6 +739,10 @@ h3 {
   .hero p {
     font-size: 0.9rem;
     max-width: 90%;
+  }
+
+  .servicos{
+    margin-top: -190px;
   }
 
   /* Cards Projetos */
@@ -843,11 +877,24 @@ h3 {
 
 @media (max-width: 360px) {
 
-  /*Logo*/
-  .logo{
-    width: 80px;
-    margin-top: -15px;
+  .header {
+    background-color: #7a7171;
+    height: 130px;
+    position: relative;
   }
+  
+ 
+  .logo-img {
+    position: absolute;
+    top: -20px;
+    left: 50%;               
+    transform: translateX(-50%);
+    width: 170px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+  }
+  
+  
 
    /* Carrossel de Skills */
    .skills-carousel {
